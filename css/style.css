@@ -1,0 +1,247 @@
+:root{
+    --Primary: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin: 2em;
+    color: var(--Grayish-Blue);
+
+}
+#top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20vw;
+    height: 35vw;
+    background: url('/pricing-component-with-toggle-master/images/bg-top.svg') no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+#bottom-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20vw;
+    height: 20vw;
+    background: url('/pricing-component-with-toggle-master/images/bg-bottom.svg') no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+h1{
+     font-size: 1.5em;
+}
+h2{
+    color: var(--Dark-Grayish-Blue);
+    font-size: 3.5em;
+}
+h5{
+    color: var(--Light-Grayish-Blue);
+    font-size: 1em;
+    
+
+}
+h6{
+    font-size: 1em;
+}
+#flexSwitchCheckChecked{
+    color: white;
+}
+.form-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    
+} 
+.form-check .form-check-input{
+    border: none;
+    font-size: 1.5em;
+    margin: 0 10px;
+    align-self: center;
+    
+    
+}
+
+.form-check-input{
+    background-color: hsl(237, 63%, 64%); 
+   
+}
+.form-check-input:checked{
+    background-color: hsl(236, 72%, 79%);
+    
+}
+
+
+.switch-label {
+    margin: 0;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    margin-top: 2em;
+    
+}
+.card{
+    width: 22vw;
+    height: 55vh;
+    background-color: white;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    border: none;
+    
+}
+.basic, .master{
+    margin-top: 1em;
+    
+}
+
+.professional{
+    background: var(--Primary);
+    color: white;
+    height: 60vh;
+  
+
+}
+.proPrice{
+    color: white;
+}
+p {
+    margin: 0;
+    padding: 10px 0;
+    position: relative;
+    font-size: 0.8em;
+    text-align: center;
+    box-sizing: border-box; 
+  }
+  
+p::before {
+    content: "";
+    display: block;
+    width: 80%; 
+    height: 1px;
+    background-color: rgba(200, 200, 200, 0.4); 
+    position: absolute;
+    top: 0; 
+    left: 10%; 
+    transform: translateY(-50%); 
+}
+  
+  
+p::after {
+    content: "";
+    display: block;
+    width: 80%; 
+    height: 1px;
+    background-color: rgba(200, 200, 200, 0.4);
+    position: absolute;
+    bottom: 0;
+    left: 10%; 
+}
+  
+button{
+    color: white;
+    background: var(--Primary);
+    width: 20vw;
+    height: 7vh;
+    border-radius: 5px;
+    border: none;
+    transition: 0.5s ease;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    letter-spacing: 2px;
+    margin-top: 2em;
+}
+button:hover{
+    background: transparent;
+    color: hsl(237, 63%, 64%);
+    border: 1px solid var(--Dark-Grayish-Blue);
+}
+.ButtonProfessional{
+    background: white;
+    color: hsl(237, 63%, 64%);
+    width: 20vw;
+    height: 7vh;
+}
+.ButtonProfessional:hover{
+    border-color: white;
+    color: white;
+    background-color: transparent;
+}
+
+  
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(229, 53%, 10%); }
+
+
+@media (max-width: 768px) {
+    #top-right, #bottom-left {
+        display: none;
+    }
+    
+    .cards {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    .card {
+        width: 80vw; 
+        margin-bottom: 2em;
+        height: auto; 
+    }
+    
+    .basic, .master, .professional {
+        margin-top: 0.5em;
+        
+    }
+    .professional {
+        background: var(--Primary);
+        
+        
+        box-shadow: none;
+    }
+    
+    .proPrice {
+        color: var(--Dark-Grayish-Blue);
+    }
+
+
+    h1 {
+        font-size: 1.2em;
+    }
+    
+    h2 {
+        font-size: 2.5em;
+    }
+    
+    h5 {
+        font-size: 0.9em;
+    }
+    
+    h6 {
+        font-size: 0.9em;
+    }
+    
+    
+    button,.ButtonProfessional {
+        width: 80vw;
+    }
+
+    
+
+}
